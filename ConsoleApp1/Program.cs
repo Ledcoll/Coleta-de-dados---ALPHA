@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace ConsoleApp1 // Note: actual namespace depends on the project name.
 {
@@ -39,12 +41,28 @@ namespace ConsoleApp1 // Note: actual namespace depends on the project name.
             {
             Console.WriteLine (Nome + " você tem " + Idade + " anos de idade, portanto poderá prosseguir!" );
             Console.WriteLine ("(PRESSIONE QUALQUER TECLA PARA CONTINUAR)");
-            Console.ReadKey(true);
-
-            Console.WriteLine ("Volte mais tarde, estamos configurando algumas coisinhas e logo mais nosso programa ficará pronto!");
             Console.ReadKey();
             }
+            string sim = "sim";
+            string não = "não";
+            Console.WriteLine ("Você gosta de jogos?");
+            Console.WriteLine ( sim );
+            Console.WriteLine ( não );
+            string Resposta = Console.ReadLine();
             
+
+        if ( Resposta == sim)
+        {
+        Console.WriteLine ("quais jogos você costuma jogar?");
+        string RespostaJogo = Console.ReadLine();
+        Console.WriteLine ("ótimo! Adoramos jogar " + RespostaJogo + " também!" );
+        Console.ReadKey();
+        }
+        else 
+        {
+            Console.Write ("tudo bem! Acabamos por aqui. Seu nome é " + Nome + ", tem " + Idade + " anos de idade e não gosta de jogos.");
+            Console.ReadLine();
+        }
             
         }
     }
